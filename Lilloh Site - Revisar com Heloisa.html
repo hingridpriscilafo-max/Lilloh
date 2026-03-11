@@ -1,0 +1,1282 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Kits de maternidade premium para famílias e empresas. Personalização, qualidade e entrega em todo o Brasil. Atendemos BCG, Fleury, Credit Suisse e muito mais.">
+<meta property="og:title" content="Lilloh Baby Gifts — Kits de Maternidade Corporativos">
+<meta property="og:description" content="Presentes de maternidade com afeto e personalização. Soluções B2B para empresas que celebram seus colaboradores.">
+<meta property="og:image" content="[URL da foto hero quando disponível]">
+<title>Lilloh Baby Gifts — Kits de Maternidade Corporativos</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&family=Nunito:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+/* ─── TOKENS ───────────────────────────────────────────── */
+:root {
+  --cream:   #faf7f3;
+  --blush:   #f5e8e1;
+  --rose:    #edddd5;
+  --sage:    #d6e4d6;
+  --warm:    #c09070;
+  --deep:    #3a312b;
+  --mid:     #7a6a60;
+  --ivory:   #fffcf8;
+  --green:   #25D366;
+  --r: 16px;
+}
+
+* { margin:0; padding:0; box-sizing:border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Nunito', sans-serif;
+  background: var(--cream);
+  color: var(--deep);
+  overflow-x: hidden;
+}
+
+img { display: block; max-width: 100%; }
+
+/* ─── NAV ──────────────────────────────────────────────── */
+nav {
+  position: fixed; top:0; left:0; right:0; z-index:200;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 18px 60px;
+  background: rgba(250,247,243,.96);
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(192,144,112,.12);
+  transition: box-shadow .3s;
+}
+nav.scrolled { box-shadow: 0 4px 32px rgba(58,49,43,.07); }
+
+.logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 24px; font-weight: 400;
+  color: var(--deep); letter-spacing: .5px;
+}
+.logo em { font-style: italic; color: var(--warm); }
+
+.nav-links { display:flex; align-items:center; gap:32px; list-style:none; }
+.nav-links a {
+  text-decoration:none; color:var(--mid);
+  font-size:12.5px; letter-spacing:1.8px; text-transform:uppercase;
+  transition: color .2s;
+}
+.nav-links a:hover { color:var(--deep); }
+
+.nav-wa {
+  display:inline-flex; align-items:center; gap:8px;
+  background: var(--deep); color: var(--cream) !important;
+  padding: 9px 22px; border-radius:100px;
+  font-size:12px !important; letter-spacing:1.5px !important;
+  transition: background .2s;
+}
+.nav-wa:hover { background: var(--warm) !important; }
+
+/* ─── HERO ─────────────────────────────────────────────── */
+.hero {
+  display: grid;
+  grid-template-columns: 55% 45%;
+  min-height: 100vh;
+  padding-top: 74px;
+}
+
+.hero-text {
+  display: flex; flex-direction:column; justify-content:center;
+  padding: 80px 64px 80px 72px;
+  animation: fadeUp .8s ease both;
+}
+@keyframes fadeUp {
+  from { opacity:0; transform:translateY(28px); }
+  to   { opacity:1; transform:translateY(0); }
+}
+
+.hero-eyebrow {
+  display:inline-flex; align-items:center; gap:10px;
+  font-size:11px; letter-spacing:3.5px; text-transform:uppercase;
+  color: var(--warm); margin-bottom:24px;
+}
+.hero-eyebrow::before {
+  content:''; width:32px; height:1px; background:var(--warm);
+}
+
+.hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(40px, 4.5vw, 62px);
+  font-weight: 400; line-height: 1.1;
+  margin-bottom: 22px;
+}
+.hero h1 em { font-style:italic; color:var(--warm); }
+
+.hero-sub {
+  font-size:15.5px; color:var(--mid);
+  line-height:1.85; max-width:430px; margin-bottom:40px;
+}
+
+/* Dois CTAs principais — ponto-chave do diagnóstico */
+.hero-ctas {
+  display:flex; gap:14px; flex-wrap:wrap; margin-bottom:48px;
+}
+
+.cta-main {
+  display:inline-flex; align-items:center; gap:10px;
+  background: var(--deep); color: var(--cream);
+  text-decoration:none; padding:15px 30px; border-radius:100px;
+  font-size:13px; letter-spacing:1.5px; text-transform:uppercase;
+  font-weight:500; transition: all .25s;
+}
+.cta-main:hover { background:var(--warm); transform:translateY(-2px); }
+
+.cta-outline {
+  display:inline-flex; align-items:center; gap:10px;
+  border:1.5px solid var(--deep); color:var(--deep);
+  text-decoration:none; padding:14px 28px; border-radius:100px;
+  font-size:13px; letter-spacing:1.5px; text-transform:uppercase;
+  font-weight:500; transition: all .25s;
+}
+.cta-outline:hover { background:var(--deep); color:var(--cream); transform:translateY(-2px); }
+
+.hero-trust {
+  display:flex; align-items:center; gap:16px;
+  padding-top:32px; border-top:1px solid rgba(192,144,112,.2);
+}
+.hero-trust-num {
+  font-family:'Playfair Display', serif;
+  font-size:32px; font-weight:400; color:var(--warm);
+  line-height:1;
+}
+.hero-trust-text { font-size:13px; color:var(--mid); line-height:1.5; }
+
+/* Logos rápidos de clientes no hero */
+.hero-clients {
+  display:flex; align-items:center; gap:12px;
+  margin-top:20px; flex-wrap:wrap;
+}
+.hero-clients-label {
+  font-size:10px; letter-spacing:2px; text-transform:uppercase;
+  color:var(--mid); opacity:.7; white-space:nowrap;
+}
+.client-chip {
+  font-size:11px; font-weight:600;
+  color: var(--mid); opacity:.65;
+  border:1px solid rgba(122,106,96,.2);
+  padding:4px 12px; border-radius:100px;
+  letter-spacing:.5px;
+}
+
+.hero-image {
+  position:relative; overflow:hidden;
+  animation: zoomIn 1.1s ease both;
+}
+@keyframes zoomIn {
+  from { transform:scale(1.06); opacity:0; }
+  to   { transform:scale(1); opacity:1; }
+}
+.hero-image img {
+  width:100%; height:100%; object-fit:cover; object-position:center top;
+}
+.hero-image-overlay {
+  position:absolute; inset:0;
+  background: linear-gradient(to right, rgba(250,247,243,.35) 0%, transparent 40%);
+}
+
+/* Tag flutuante no hero */
+.hero-float-tag {
+  position:absolute; bottom:36px; left:36px;
+  background:rgba(250,247,243,.95); backdrop-filter:blur(12px);
+  border:1px solid rgba(192,144,112,.25);
+  border-radius:100px; padding:12px 22px;
+  font-size:13px; color:var(--deep);
+  box-shadow: 0 8px 24px rgba(58,49,43,.1);
+}
+
+/* ─── DUAL PATH — seção dois públicos ─────────────────── */
+.dual {
+  display:grid; grid-template-columns:1fr 1fr;
+  background: var(--ivory);
+  border-top:1px solid rgba(192,144,112,.1);
+  border-bottom:1px solid rgba(192,144,112,.1);
+}
+
+.dual-card {
+  padding:64px 56px;
+  display:flex; flex-direction:column;
+  gap:20px; text-decoration:none;
+  transition: background .3s;
+  position:relative;
+}
+.dual-card:first-child {
+  border-right:1px solid rgba(192,144,112,.15);
+}
+.dual-card:hover { background: var(--blush); }
+
+.dual-icon {
+  width:52px; height:52px; border-radius:50%;
+  display:flex; align-items:center; justify-content:center;
+  font-size:22px;
+}
+.dual-icon.rosa  { background:var(--rose); }
+.dual-icon.sage  { background:var(--sage); }
+
+.dual-label {
+  font-size:10px; letter-spacing:3px; text-transform:uppercase;
+  color:var(--warm);
+}
+.dual-card h2 {
+  font-family:'Playfair Display', serif;
+  font-size:30px; font-weight:400; line-height:1.2;
+  color:var(--deep);
+}
+.dual-card p {
+  font-size:14.5px; color:var(--mid); line-height:1.8;
+  max-width:340px;
+}
+.dual-arrow {
+  display:inline-flex; align-items:center; gap:10px;
+  font-size:12.5px; letter-spacing:1.5px; text-transform:uppercase;
+  color:var(--deep); font-weight:600; margin-top:8px;
+  border-bottom:1.5px solid currentColor; padding-bottom:2px;
+  transition: color .2s;
+}
+.dual-card:hover .dual-arrow { color:var(--warm); }
+
+/* ─── PILARES ──────────────────────────────────────────── */
+.pillars {
+  padding:72px 72px 64px;
+  background:var(--cream);
+}
+.section-eyebrow {
+  font-size:10px; letter-spacing:4px; text-transform:uppercase;
+  color:var(--warm); text-align:center; margin-bottom:48px;
+}
+.pillars-grid {
+  display:grid; grid-template-columns:repeat(5,1fr);
+  gap:0;
+}
+.pillar {
+  padding:28px 20px; text-align:center;
+  border-right:1px solid rgba(192,144,112,.15);
+}
+.pillar:last-child { border-right:none; }
+.pillar-icon {
+  width:48px; height:48px; border-radius:50%;
+  background:var(--blush); display:flex; align-items:center;
+  justify-content:center; font-size:20px;
+  margin:0 auto 16px;
+}
+.pillar h3 {
+  font-family:'Playfair Display', serif;
+  font-size:17px; font-weight:400; margin-bottom:8px;
+}
+.pillar p { font-size:12.5px; color:var(--mid); line-height:1.6; }
+
+/* ─── COMO FUNCIONA ────────────────────────────────────── */
+.how {
+  padding:96px 72px;
+  background:var(--ivory);
+}
+.section-header { margin-bottom:64px; }
+.section-header h2 {
+  font-family:'Playfair Display', serif;
+  font-size:clamp(34px,3.5vw,48px); font-weight:400;
+  line-height:1.15; margin-bottom:14px;
+}
+.section-header h2 em { font-style:italic; color:var(--warm); }
+.section-header p { font-size:15px; color:var(--mid); line-height:1.8; max-width:520px; }
+
+.steps {
+  display:grid; grid-template-columns:repeat(4,1fr);
+  gap:40px; position:relative;
+}
+.steps::before {
+  content:'';
+  position:absolute; top:22px; left:22px; right:22px;
+  height:1px; background:linear-gradient(to right,var(--rose),var(--sage));
+  z-index:0;
+}
+.step { position:relative; z-index:1; }
+.step-num {
+  width:44px; height:44px; border-radius:50%;
+  background:var(--deep); color:var(--cream);
+  display:flex; align-items:center; justify-content:center;
+  font-family:'Playfair Display', serif; font-size:20px;
+  margin-bottom:20px;
+}
+.step h3 {
+  font-family:'Playfair Display', serif;
+  font-size:20px; font-weight:400; margin-bottom:10px;
+}
+.step p { font-size:13.5px; color:var(--mid); line-height:1.7; }
+.step-badge {
+  display:inline-block; margin-top:12px;
+  font-size:11px; padding:4px 12px; border-radius:100px;
+  background:var(--blush); color:var(--warm); letter-spacing:.5px;
+}
+
+/* ─── CATÁLOGO ─────────────────────────────────────────── */
+.catalog {
+  padding:96px 72px;
+  background:var(--cream);
+}
+
+.catalog-top {
+  display:flex; justify-content:space-between; align-items:flex-end;
+  margin-bottom:52px;
+}
+
+.kit-grid {
+  display:grid;
+  grid-template-columns:1.5fr 1fr 1fr;
+  gap:22px;
+}
+
+.kit-card {
+  border-radius:var(--r); overflow:hidden;
+  background:var(--ivory);
+  border:1px solid rgba(192,144,112,.15);
+  transition: transform .3s, box-shadow .3s;
+  cursor:pointer;
+}
+.kit-card:hover { transform:translateY(-6px); box-shadow:0 24px 56px rgba(58,49,43,.1); }
+
+.kit-img-wrap { position:relative; overflow:hidden; }
+.kit-card img {
+  width:100%; height:300px; object-fit:cover;
+  transition: transform .5s;
+}
+.kit-card.featured img { height:420px; }
+.kit-card:hover img { transform:scale(1.04); }
+
+.kit-badge {
+  position:absolute; top:14px; right:14px;
+  background:var(--warm); color:#fff;
+  font-size:10px; letter-spacing:2px; text-transform:uppercase;
+  padding:5px 13px; border-radius:100px;
+}
+
+.kit-body { padding:24px 26px 26px; }
+.kit-cat {
+  font-size:10px; letter-spacing:2.5px; text-transform:uppercase;
+  color:var(--warm); margin-bottom:6px;
+}
+.kit-name {
+  font-family:'Playfair Display', serif;
+  font-size:21px; font-weight:400; margin-bottom:8px;
+}
+.kit-desc { font-size:13px; color:var(--mid); line-height:1.65; margin-bottom:18px; }
+.kit-link {
+  display:inline-flex; align-items:center; gap:8px;
+  font-size:12px; letter-spacing:1.5px; text-transform:uppercase;
+  color:var(--deep); text-decoration:none; font-weight:600;
+  border-bottom:1.5px solid var(--deep); padding-bottom:2px;
+  transition: color .2s, border-color .2s;
+}
+.kit-link:hover { color:var(--warm); border-color:var(--warm); }
+
+/* ─── EMPRESAS ─────────────────────────────────────────── */
+.corporate {
+  background: var(--deep);
+  color: var(--cream);
+  padding: 0;
+  overflow:hidden;
+}
+.corporate-inner {
+  display:grid; grid-template-columns:1fr 1fr;
+  min-height:600px;
+}
+.corp-text {
+  padding:80px 64px 80px 72px;
+  display:flex; flex-direction:column; justify-content:center;
+}
+.corp-text .section-eyebrow { text-align:left; margin-bottom:28px; }
+
+.corp-text h2 {
+  font-family:'Playfair Display', serif;
+  font-size:clamp(36px,3.8vw,52px); font-weight:400;
+  line-height:1.1; margin-bottom:22px; color:var(--cream);
+}
+.corp-text h2 em { font-style:italic; color:var(--warm); }
+.corp-text p { font-size:15px; line-height:1.85; opacity:.72; margin-bottom:32px; max-width:440px; }
+
+.corp-features { list-style:none; margin-bottom:40px; }
+.corp-features li {
+  display:flex; align-items:flex-start; gap:12px;
+  font-size:14px; opacity:.85; margin-bottom:14px;
+}
+.corp-features li::before {
+  content:'✦'; color:var(--warm); font-size:10px;
+  flex-shrink:0; margin-top:3px;
+}
+
+.cta-warm {
+  display:inline-flex; align-items:center; gap:10px;
+  background:var(--warm); color:#fff;
+  text-decoration:none; padding:15px 32px; border-radius:100px;
+  font-size:13px; letter-spacing:1.5px; text-transform:uppercase;
+  font-weight:500; transition: all .25s; align-self:flex-start;
+}
+.cta-warm:hover { background:var(--cream); color:var(--deep); transform:translateY(-2px); }
+
+/* Logos de clientes */
+.corp-logos { margin-top:44px; }
+.corp-logos-label {
+  font-size:9px; letter-spacing:3px; text-transform:uppercase;
+  opacity:.4; margin-bottom:18px;
+}
+.logos-wrap { display:flex; flex-wrap:wrap; gap:8px; }
+.logo-chip {
+  font-size:13px; font-weight:600;
+  border:1px solid rgba(255,255,255,.2);
+  color:rgba(255,255,255,.9);
+  padding:7px 16px; border-radius:100px;
+  letter-spacing:.5px;
+  transition: border-color .2s, color .2s;
+}
+.logo-chip:hover { border-color:var(--warm); color:var(--warm); }
+
+.corp-visual { position:relative; overflow:hidden; }
+.corp-visual img {
+  width:100%; height:100%; object-fit:cover; object-position:center;
+}
+.corp-visual-overlay {
+  position:absolute; inset:0;
+  background: linear-gradient(to right, rgba(58,49,43,.4) 0%, transparent 50%);
+}
+
+/* Depoimento flutuante sobre a imagem */
+.corp-quote {
+  position:absolute; bottom:40px; left:40px; right:40px;
+  background:rgba(250,247,243,.97); backdrop-filter:blur(12px);
+  border-radius:var(--r); padding:24px 28px;
+  border-left:3px solid var(--warm);
+}
+.corp-quote p {
+  font-family:'Playfair Display', serif;
+  font-size:15px; font-style:italic; color:var(--deep);
+  line-height:1.6; margin-bottom:12px; opacity:1;
+}
+.corp-quote-author { font-size:12px; color:var(--mid); }
+
+/* ─── DEPOIMENTOS ──────────────────────────────────────── */
+.testimonials {
+  padding:96px 72px;
+  background:var(--blush);
+}
+.testimonials .section-header { text-align:center; }
+.testimonials .section-header p { margin:0 auto; }
+
+.testi-grid {
+  display:grid; grid-template-columns:repeat(3,1fr);
+  gap:22px; margin-top:56px;
+}
+
+.testi-card {
+  background:var(--ivory); border-radius:var(--r);
+  padding:36px 30px;
+  border:1px solid rgba(192,144,112,.12);
+  display:flex; flex-direction:column;
+}
+.testi-stars { font-size:14px; margin-bottom:16px; letter-spacing:2px; }
+.testi-text {
+  font-family:'Playfair Display', serif;
+  font-size:15.5px; font-style:italic;
+  color:var(--deep); line-height:1.75;
+  margin-bottom:24px; flex:1;
+}
+.testi-author { display:flex; align-items:center; gap:12px; }
+.testi-avatar {
+  width:40px; height:40px; border-radius:50%;
+  background:var(--sage); display:flex; align-items:center;
+  justify-content:center; font-size:16px; flex-shrink:0;
+}
+.testi-name { font-size:13px; font-weight:600; color:var(--deep); }
+.testi-role { font-size:12px; color:var(--mid); }
+
+/* ─── SOBRE ─────────────────────────────────────────────── */
+.about {
+  display:grid; grid-template-columns:1fr 1fr;
+  gap:0; background:var(--ivory);
+  overflow:hidden;
+}
+.about-img-side { position:relative; min-height:560px; }
+.about-img-side img {
+  width:100%; height:100%; object-fit:cover; object-position:center top;
+}
+.about-img-badge {
+  position:absolute; bottom:32px; right:32px;
+  background:var(--deep); color:var(--cream);
+  border-radius:var(--r); padding:22px 26px; text-align:center;
+}
+.about-img-badge .big-num {
+  font-family:'Playfair Display', serif;
+  font-size:44px; font-weight:400; color:var(--warm);
+  line-height:1;
+}
+.about-img-badge .badge-text { font-size:12px; opacity:.7; margin-top:4px; }
+
+.about-content {
+  padding:80px 64px 80px 72px;
+  display:flex; flex-direction:column; justify-content:center;
+}
+.about-content .section-eyebrow { text-align:left; margin-bottom:24px; }
+.about-content h2 {
+  font-family:'Playfair Display', serif;
+  font-size:clamp(34px,3.5vw,46px); font-weight:400;
+  line-height:1.15; margin-bottom:24px;
+}
+.about-content h2 em { font-style:italic; color:var(--warm); }
+.about-content p {
+  font-size:15px; color:var(--mid);
+  line-height:1.9; margin-bottom:18px;
+}
+.about-content a {
+  margin-top:12px; align-self:flex-start;
+}
+
+/* ─── FAQ ───────────────────────────────────────────────── */
+.faq { padding:96px 72px; background:var(--cream); }
+.faq-wrap {
+  display:grid; grid-template-columns:1fr 1.6fr;
+  gap:80px; align-items:start;
+}
+.faq-left h2 {
+  font-family:'Playfair Display', serif;
+  font-size:clamp(34px,3.5vw,46px); font-weight:400;
+  line-height:1.15; margin-bottom:14px;
+}
+.faq-left h2 em { font-style:italic; color:var(--warm); }
+.faq-left p { font-size:14px; color:var(--mid); line-height:1.8; margin-bottom:28px; }
+
+.faq-list { list-style:none; }
+.faq-item { border-bottom:1px solid rgba(192,144,112,.18); }
+.faq-q {
+  display:flex; justify-content:space-between; align-items:center;
+  padding:20px 0; cursor:pointer;
+  font-size:15px; font-weight:500; color:var(--deep);
+  gap:20px; transition:color .2s;
+}
+.faq-q:hover { color:var(--warm); }
+.faq-icon {
+  flex-shrink:0; width:28px; height:28px; border-radius:50%;
+  border:1.5px solid var(--warm); color:var(--warm);
+  display:flex; align-items:center; justify-content:center;
+  font-size:16px; transition:all .3s;
+}
+.faq-a {
+  display:none; padding:0 0 18px;
+  font-size:14px; color:var(--mid); line-height:1.8;
+}
+.faq-item.open .faq-a { display:block; }
+.faq-item.open .faq-icon { background:var(--warm); color:#fff; transform:rotate(45deg); }
+
+/* ─── CTA FINAL ─────────────────────────────────────────── */
+.cta-band {
+  padding:100px 72px; background:var(--rose);
+  text-align:center; position:relative; overflow:hidden;
+}
+.cta-band::before {
+  content:''; position:absolute;
+  width:500px; height:500px; border-radius:50%;
+  background:radial-gradient(circle,rgba(192,144,112,.2) 0%,transparent 70%);
+  left:-100px; top:-150px;
+}
+.cta-band::after {
+  content:''; position:absolute;
+  width:350px; height:350px; border-radius:50%;
+  background:radial-gradient(circle,rgba(192,144,112,.15) 0%,transparent 70%);
+  right:-60px; bottom:-80px;
+}
+.cta-band > * { position:relative; z-index:1; }
+.cta-band h2 {
+  font-family:'Playfair Display', serif;
+  font-size:clamp(38px,4.5vw,58px); font-weight:400;
+  line-height:1.1; margin-bottom:16px;
+}
+.cta-band h2 em { font-style:italic; color:var(--warm); }
+.cta-band p { font-size:16px; color:var(--mid); margin-bottom:44px; }
+.cta-band-btns { display:flex; gap:16px; justify-content:center; flex-wrap:wrap; }
+
+/* ─── FOOTER ────────────────────────────────────────────── */
+footer {
+  background:var(--deep); color:var(--cream);
+  padding:56px 72px 0;
+}
+.footer-top {
+  display:grid; grid-template-columns:1.6fr 1fr 1fr;
+  gap:56px; padding-bottom:48px;
+  border-bottom:1px solid rgba(255,255,255,.07);
+}
+.footer-brand .logo { font-size:22px; margin-bottom:14px; }
+.footer-brand p { font-size:13px; opacity:.5; line-height:1.8; max-width:260px; }
+
+.footer-col h4 {
+  font-size:9px; letter-spacing:3px; text-transform:uppercase;
+  color:var(--warm); margin-bottom:20px;
+}
+.footer-col ul { list-style:none; }
+.footer-col li { margin-bottom:10px; }
+.footer-col a {
+  text-decoration:none; font-size:13.5px;
+  color:rgba(250,247,243,.5); transition:color .2s;
+}
+.footer-col a:hover { color:var(--cream); }
+
+.footer-bottom {
+  padding:18px 0;
+  display:flex; justify-content:space-between;
+  font-size:11.5px; opacity:.35;
+}
+
+/* ─── WA FLOAT ──────────────────────────────────────────── */
+.wa-btn {
+  position:fixed; bottom:28px; right:28px; z-index:300;
+  width:56px; height:56px; border-radius:50%;
+  background:var(--green);
+  display:flex; align-items:center; justify-content:center;
+  text-decoration:none; font-size:26px;
+  box-shadow:0 8px 28px rgba(37,211,102,.4);
+  transition: transform .3s;
+  animation: waPulse 2.5s infinite;
+}
+.wa-btn:hover { transform:scale(1.1); }
+@keyframes waPulse {
+  0%,100% { box-shadow:0 8px 28px rgba(37,211,102,.4); }
+  50% { box-shadow:0 8px 28px rgba(37,211,102,.6),0 0 0 14px rgba(37,211,102,.08); }
+}
+
+/* ─── MOBILE ─ 768px ──────────────────────────────────────── */
+@media (max-width: 768px) {
+  nav { padding: 14px 20px; }
+  .nav-links li:not(:last-child) { display: none; }
+
+  .hero { grid-template-columns: 1fr; min-height: auto; }
+  .hero-text { padding: 52px 24px 36px; }
+  .hero-image { height: 300px; }
+  .hero-float-tag { display: none; }
+  .hero-trust { flex-wrap: wrap; gap: 12px; }
+  .hero-clients { flex-wrap: wrap; }
+
+  .dual { grid-template-columns: 1fr; }
+  .dual-card:first-child { border-right: none; border-bottom: 1px solid rgba(192,144,112,.15); }
+
+  .pillars { padding: 52px 24px; }
+  .pillars-grid { grid-template-columns: repeat(2, 1fr); }
+  .pillars-grid .pillar:nth-child(5) {
+    grid-column: 1 / -1; text-align: center;
+    display: flex; flex-direction: column; align-items: center;
+    border-right: none;
+  }
+  .pillar { border-right: none; border-bottom: 1px solid rgba(192,144,112,.1); padding: 22px 16px; }
+  .pillar:last-child { border-bottom: none; }
+
+  .how { padding: 56px 24px; }
+  .steps { grid-template-columns: repeat(2, 1fr); gap: 24px; }
+  .steps::before { display: none; }
+
+  .catalog { padding: 56px 24px; }
+  .catalog-top { flex-direction: column; align-items: flex-start; gap: 16px; }
+  .kit-grid { grid-template-columns: 1fr; }
+
+  .corporate-inner { grid-template-columns: 1fr; }
+  .corp-text { padding: 56px 24px; }
+  .corp-visual { min-height: 320px; }
+  .corp-quote { bottom: 16px; left: 16px; right: 16px; }
+
+  .testimonials { padding: 56px 24px; }
+  .testi-grid { grid-template-columns: 1fr; }
+
+  .lead-capture { padding: 56px 24px; }
+  .lead-inner { grid-template-columns: 1fr; gap: 36px; }
+
+  .about { grid-template-columns: 1fr; }
+  .about-img-side { min-height: 340px; }
+  .about-img-badge { position: static; margin: 16px 24px; }
+  .about-content { padding: 36px 24px 56px; }
+
+  .faq { padding: 56px 24px; }
+  .faq-wrap { grid-template-columns: 1fr; gap: 32px; }
+
+  .cta-band { padding: 56px 24px; }
+  .cta-band-btns { flex-direction: column; align-items: center; }
+
+  footer { padding: 44px 24px 0; }
+  .footer-top { grid-template-columns: 1fr; gap: 32px; }
+  .footer-bottom { flex-direction: column; gap: 4px; text-align: center; }
+}
+
+/* ── PILLAR LETTER ICON ── */
+.pillar-letter {
+  font-family: 'Playfair Display', serif;
+  font-size: 22px;
+  font-weight: 400;
+  font-style: italic;
+  color: var(--warm);
+  line-height: 1;
+}
+
+
+/* ── QUIZ ── */
+.quiz-section {
+  padding: 96px 72px;
+  background: var(--ivory);
+  text-align: center;
+}
+.quiz-inner {
+  max-width: 640px;
+  margin: 0 auto;
+}
+.quiz-inner h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(32px, 3.5vw, 46px);
+  font-weight: 400; line-height: 1.15;
+  margin-bottom: 12px;
+}
+.quiz-inner h2 em { font-style: italic; color: var(--warm); }
+.quiz-sub {
+  font-size: 15px; color: var(--mid);
+  line-height: 1.8; margin-bottom: 48px;
+}
+.quiz-body { position: relative; min-height: 200px; }
+
+.quiz-step {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  animation: fadeUp .4s ease both;
+}
+.quiz-step.active { display: flex; }
+
+.quiz-q {
+  font-family: 'Playfair Display', serif;
+  font-size: 22px; font-weight: 400;
+  color: var(--deep); margin-bottom: 8px;
+}
+
+.quiz-options {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+}
+.quiz-opt {
+  width: 100%;
+  padding: 16px 24px;
+  background: white;
+  border: 1.5px solid rgba(192,144,112,.25);
+  border-radius: 100px;
+  font-family: 'Nunito', sans-serif;
+  font-size: 14px; font-weight: 500;
+  color: var(--deep);
+  cursor: pointer;
+  transition: all .2s;
+  text-align: center;
+}
+.quiz-opt:hover {
+  border-color: var(--warm);
+  background: var(--blush);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(192,144,112,.15);
+}
+.quiz-opt.selected {
+  background: var(--deep);
+  color: var(--cream);
+  border-color: var(--deep);
+}
+
+/* Resultado */
+.quiz-result-icon {
+  font-size: 28px; color: var(--warm);
+  margin-bottom: 8px;
+}
+.quiz-result-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 24px; font-weight: 400;
+  color: var(--deep); margin-bottom: 12px;
+}
+.quiz-result-text {
+  font-size: 15px; color: var(--mid);
+  line-height: 1.8; margin-bottom: 28px;
+  max-width: 480px;
+}
+.quiz-cta { margin-bottom: 16px; }
+.quiz-restart {
+  background: none; border: none;
+  font-family: 'Nunito', sans-serif;
+  font-size: 13px; color: var(--mid);
+  cursor: pointer; text-decoration: underline;
+  transition: color .2s;
+}
+.quiz-restart:hover { color: var(--deep); }
+
+/* Progress bar */
+.quiz-progress {
+  margin-top: 36px;
+  height: 3px;
+  background: rgba(192,144,112,.15);
+  border-radius: 100px;
+  overflow: hidden;
+}
+.quiz-progress-bar {
+  height: 100%;
+  background: var(--warm);
+  border-radius: 100px;
+  width: 0%;
+  transition: width .4s ease;
+}
+
+@media (max-width: 768px) {
+  .quiz-section { padding: 56px 24px; }
+}
+
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="navbar">
+  <div class="logo"><em>Lilloh</em> Baby Gifts</div>
+  <ul class="nav-links">
+    <li><a href="#catalogo">Catálogo</a></li>
+    <li><a href="#empresas">Empresas</a></li>
+    <li><a href="#sobre">Sobre</a></li>
+    <li><a href="#faq">Dúvidas</a></li>
+    <li><a href="https://wa.me/5511942748600" class="nav-wa">Solicitar orçamento</a></li>
+  </ul>
+</nav>
+
+<!-- ═══════════ HERO ═══════════ -->
+<section class="hero">
+  <div class="hero-text">
+    <div class="hero-eyebrow">Kits de Maternidade</div>
+    <h1>Transformamos a chegada<br>de um bebê em um gesto<br><em>inesquecível</em></h1>
+    <p class="hero-sub">Kits cuidadosamente montados com afeto e personalização — ideais para presentear família, amigos ou colaboradoras gestantes.</p>
+
+    <div class="hero-ctas">
+      <a href="#catalogo" class="cta-main">Quero presentear →</a>
+      <a href="#empresas" class="cta-outline">Soluções para empresas →</a>
+    </div>
+
+    <div class="hero-trust">
+      <div>
+        <div class="hero-trust-num">+500</div>
+        <div class="hero-trust-text">kits entregues<br>com amor</div>
+      </div>
+      <div style="width:1px;height:44px;background:rgba(192,144,112,.3)"></div>
+      <div>
+        <div class="hero-trust-num">+50</div>
+        <div class="hero-trust-text">empresas<br>parceiras</div>
+      </div>
+      <div style="width:1px;height:44px;background:rgba(192,144,112,.3)"></div>
+      <div>
+        <div class="hero-trust-num">5★</div>
+        <div class="hero-trust-text">no<br>Instagram</div>
+      </div>
+    </div>
+
+    <div class="hero-clients">
+      <span class="hero-clients-label">Clientes</span>
+      <span class="client-chip">BCG</span>
+      <span class="client-chip">Credit Suisse</span>
+      <span class="client-chip">Fleury</span>
+      <span class="client-chip">Eucerin</span>
+      <span class="client-chip">Nivea</span>
+    </div>
+  </div>
+
+  <div class="hero-image">
+    <div class="img-ph" style="min-height:100vh;"><div class="img-ph-label">Foto: Hero — kit em destaque</div></div>
+    <div class="hero-image-overlay"></div>
+    <div class="hero-float-tag">✦ Kits personalizados com a identidade da sua empresa</div>
+  </div>
+</section>
+
+<!-- ═══════════ DOIS CAMINHOS ═══════════ -->
+<section class="dual">
+  <a href="#catalogo" class="dual-card">
+    <div class="dual-icon rosa"></div>
+    <div class="dual-label">Para você</div>
+    <h2>Quero presentear<br>alguém especial</h2>
+    <p>Um kit único para celebrar a chegada do bebê de uma amiga, familiar ou colaboradora. Com personalização e embalagem primorosa.</p>
+    <span class="dual-arrow">Ver kits disponíveis →</span>
+  </a>
+  <a href="#empresas" class="dual-card">
+    <div class="dual-icon sage"></div>
+    <div class="dual-label">Para empresas</div>
+    <h2>Preciso de soluções<br>corporativas</h2>
+    <p>Presenteie colaboradores que estão esperando um bebê com kits personalizados com a identidade da sua empresa. Pedidos em volume com logística simplificada.</p>
+    <span class="dual-arrow">Solicitar proposta corporativa →</span>
+  </a>
+</section>
+
+<!-- ═══════════ COMO FUNCIONA ═══════════ -->
+<section class="how">
+  <div class="section-header">
+    <div class="section-eyebrow" style="text-align:left">Como funciona</div>
+    <h2>Da escolha à entrega,<br>tudo com <em>muito carinho</em></h2>
+    <p>Um processo simples, pensado para facilitar sua vida e garantir que o presente chegue perfeito.</p>
+  </div>
+  <div class="steps">
+    <div class="step">
+      <div class="step-num">1</div>
+      <h3>Escolha o Kit</h3>
+      <p>Navegue pelo catálogo e encontre o kit ideal para a ocasião.</p>
+      <span class="step-badge">Pronta entrega disponível</span>
+    </div>
+    <div class="step">
+      <div class="step-num">2</div>
+      <h3>Personalize</h3>
+      <p>Adicione o nome do bebê, uma mensagem especial ou o logo da sua empresa.</p>
+      <span class="step-badge">100% personalizável</span>
+    </div>
+    <div class="step">
+      <div class="step-num">3</div>
+      <h3>Escolha o Prazo</h3>
+      <p>Além das opções à pronta entrega, oferecemos a possibilidade de programar o recebimento conforme sua necessidade e planejamento.</p>
+      <span class="step-badge">Prazos flexíveis</span>
+    </div>
+    <div class="step">
+      <div class="step-num">4</div>
+      <h3>Receba com Amor</h3>
+      <p>Entregamos em embalagem premium, digna de um presente tão especial.</p>
+      <span class="step-badge">Embalagem premium</span>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ CATÁLOGO ═══════════ -->
+<section class="catalog" id="catalogo">
+  <div class="catalog-top">
+    <div>
+      <div class="section-eyebrow" style="text-align:left">Catálogo</div>
+      <h2 style="font-family:'Playfair Display',serif;font-size:clamp(34px,3.5vw,48px);font-weight:400;">Nossos kits</h2>
+    </div>
+    <a href="https://wa.me/5511942748600" class="cta-outline">Personalizar um kit →</a>
+  </div>
+
+  <div class="kit-grid">
+    <div class="kit-card featured">
+      <div class="kit-img-wrap">
+        <div class="img-ph" style="min-height:420px;"><div class="img-ph-label">Foto: Kit Empresarial — produto real</div></div>
+        <span class="kit-badge">Corporativo</span>
+      </div>
+      <div class="kit-body">
+        <div class="kit-cat">Para empresas</div>
+        <div class="kit-name">Kit Corporativo Personalizado</div>
+        <div class="kit-desc">Macacão, manta de tricô, naninha e sapatinhos em couro legítimo — tudo com a identidade visual da sua empresa. Perfeito para ações de RH.</div>
+        <a href="https://wa.me/5511942748600" class="kit-link">Solicitar proposta →</a>
+      </div>
+    </div>
+
+    <div class="kit-card">
+      <div class="kit-img-wrap">
+        <div class="img-ph" style="min-height:300px;"><div class="img-ph-label">Foto: Kit Azul — produto real</div></div>
+        <span class="kit-badge">Personalizável</span>
+      </div>
+      <div class="kit-body">
+        <div class="kit-cat">Menino</div>
+        <div class="kit-name">Kit Azul Delicado</div>
+        <div class="kit-desc">Manta, naninha ovelhinha e sapatinhos em couro legítimo 3–6m.</div>
+        <a href="https://wa.me/5511942748600" class="kit-link">Personalizar este kit →</a>
+      </div>
+    </div>
+
+    <div class="kit-card">
+      <div class="kit-img-wrap">
+        <div class="img-ph" style="min-height:300px;"><div class="img-ph-label">Foto: Kit Rosa — produto real</div></div>
+        <span class="kit-badge">Personalizável</span>
+      </div>
+      <div class="kit-body">
+        <div class="kit-cat">Menina</div>
+        <div class="kit-name">Kit Rosa Especial</div>
+        <div class="kit-desc">Manta, naninha ovelhinha e sapatinhos em couro legítimo 3–6m.</div>
+        <a href="https://wa.me/5511942748600" class="kit-link">Personalizar este kit →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ EMPRESAS ═══════════ -->
+<section class="corporate" id="empresas">
+  <div class="corporate-inner">
+    <div class="corp-text">
+      <div class="section-eyebrow">Para empresas</div>
+      <h2>Um gesto que celebra<br><em>quem importa</em></h2>
+      <p>A chegada de um bebê é um dos momentos mais importantes na vida de uma família. Empresas que reconhecem esse momento fortalecem vínculos, cultura e pertencimento.</p>
+      <p>Nossos kits corporativos foram desenvolvidos para empresas que desejam demonstrar cuidado e reconhecimento de forma sensível e elegante.</p>
+
+      <ul class="corp-features">
+        <li>Personalização com a identidade visual da sua empresa</li>
+        <li>Atendimento dedicado para equipes de RH</li>
+        <li>Embalagem premium com cartão de mensagem personalizado</li>
+        <li>Produção sob medida para atender às necessidades da sua empresa</li>
+      </ul>
+
+      <p style="font-size:15px;line-height:1.85;opacity:.72;margin-bottom:32px;">Um gesto simples que fortalece a cultura da empresa e valoriza quem faz parte dela.</p>
+
+      <a href="https://wa.me/5511942748600" class="cta-warm">Solicitar proposta corporativa →</a>
+
+      <div class="corp-logos">
+        <div class="corp-logos-label" style="font-size:10px;letter-spacing:3px;text-transform:uppercase;opacity:.55;margin-bottom:18px;">EMPRESAS QUE JÁ CELEBRARAM COM A LILLOH</div>
+        <div class="logos-wrap">
+          <span class="logo-chip">BCG</span>
+          <span class="logo-chip">Credit Suisse</span>
+          <span class="logo-chip">Fleury</span>
+          <span class="logo-chip">Fleury Fertilidade</span>
+          <span class="logo-chip">Beiersdorf</span>
+          <span class="logo-chip">Eucerin</span>
+          <span class="logo-chip">Nivea</span>
+          <span class="logo-chip">Coaktion</span>
+          <span class="logo-chip">TWK Advogados</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="corp-visual">
+      <div class="img-ph" style="min-height:100%;"><div class="img-ph-label">Foto: Personalização — adesivos reais</div></div>
+      <div class="corp-visual-overlay"></div>
+      <div class="corp-quote">
+        <p>"A Lilloh transformou nossa ação de RH em algo verdadeiramente especial. Cada colaboradora ficou encantada!"</p>
+        <div class="corp-quote-author">— Gestora de RH, empresa parceira</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ DEPOIMENTOS ═══════════ -->
+<section class="testimonials" id="depoimentos">
+  <div class="section-header">
+    <div class="section-eyebrow">Depoimentos</div>
+    <h2 style="font-family:'Playfair Display',serif;font-size:clamp(34px,3.5vw,48px);font-weight:400;line-height:1.15;">O que dizem sobre<br>a <em>Lilloh</em></h2>
+    <p>Empresas e famílias que celebraram com a gente.</p>
+  </div>
+  <div class="testi-grid">
+    <div class="testi-card">
+      <div class="testi-stars">★★★★★</div>
+      <div class="testi-text">[Depoimento real a inserir]</div>
+      <div class="testi-author">
+        <div class="testi-avatar" style="background:#d6e4d6;color:#3a312b;font-size:15px;font-weight:600;">N</div>
+        <div>
+          <div class="testi-name">[Nome completo]</div>
+          <div class="testi-role">[Cargo] — [Empresa]</div>
+        </div>
+      </div>
+    </div>
+    <div class="testi-card">
+      <div class="testi-stars">★★★★★</div>
+      <div class="testi-text">[Depoimento real a inserir]</div>
+      <div class="testi-author">
+        <div class="testi-avatar" style="background:#d6e4d6;color:#3a312b;font-size:15px;font-weight:600;">N</div>
+        <div>
+          <div class="testi-name">[Nome completo]</div>
+          <div class="testi-role">[Cargo] — [Empresa]</div>
+        </div>
+      </div>
+    </div>
+    <div class="testi-card">
+      <div class="testi-stars">★★★★★</div>
+      <div class="testi-text">[Depoimento real a inserir]</div>
+      <div class="testi-author">
+        <div class="testi-avatar" style="background:#d6e4d6;color:#3a312b;font-size:15px;font-weight:600;">N</div>
+        <div>
+          <div class="testi-name">[Nome completo]</div>
+          <div class="testi-role">[Cargo] — [Empresa]</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════ QUIZ ═══════════ -->
+<section class="quiz-section">
+  <div class="quiz-inner">
+    <div class="section-eyebrow">Encontre o kit ideal</div>
+    <h2>Qual kit é ideal<br>para <em>você?</em></h2>
+    <p class="quiz-sub">Responda 3 perguntas rápidas e descubra o kit perfeito para a ocasião.</p>
+
+    <div class="quiz-body">
+
+      <!-- STEP 1 -->
+      <div class="quiz-step active" data-step="1">
+        <div class="quiz-q">Para quem é o presente?</div>
+        <div class="quiz-options">
+          <button class="quiz-opt" data-next="2" data-val="familia">Uma amiga ou familiar</button>
+          <button class="quiz-opt" data-next="2" data-val="colega">Uma colaboradora ou colega</button>
+          <button class="quiz-opt" data-next="2" data-val="empresa">Minha empresa — vários presentes</button>
+        </div>
+      </div>
+
+      <!-- STEP 2 -->
+      <div class="quiz-step" data-step="2">
+        <div class="quiz-q">Você sabe o sexo do bebê?</div>
+        <div class="quiz-options">
+          <button class="quiz-opt" data-next="3" data-val="menina">Sim, é menina</button>
+          <button class="quiz-opt" data-next="3" data-val="menino">Sim, é menino</button>
+          <button class="quiz-opt" data-next="3" data-val="surpresa">Ainda é surpresa</button>
+        </div>
+      </div>
+
+      <!-- STEP 3 -->
+      <div class="quiz-step" data-step="3">
+        <div class="quiz-q">Qual é o prazo para entrega?</div>
+        <div class="quiz-options">
+          <button class="quiz-opt" data-next="result" data-val="urgente">Preciso em até 3 dias</button>
+          <button class="quiz-opt" data-next="result" data-val="semana">Tenho até 1 semana</button>
+          <button class="quiz-opt" data-next="result" data-val="flexivel">Tenho prazo flexível</button>
+        </div>
+      </div>
+
+      <!-- RESULTADO -->
+      <div class="quiz-step" data-step="result">
+        <div class="quiz-result-icon">✦</div>
+        <div class="quiz-result-title">Encontramos o kit ideal para você</div>
+        <div class="quiz-result-text" id="quiz-result-text"></div>
+        <a id="quiz-wa-link" href="https://wa.me/5511942748600" class="cta-warm quiz-cta" target="_blank">Falar com a Lilloh pelo WhatsApp →</a>
+        <button class="quiz-restart" onclick="restartQuiz()">Recomeçar</button>
+      </div>
+
+    </div>
+
+    <div class="quiz-progress">
+      <div class="quiz-progress-bar" id="quiz-progress-bar"></div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══════════ SOBRE ═══════════ -->
+<section class="about" id="sobre">
+  <div class="about-img-side">
+    <div class="img-ph" style="min-height:100%;"><div class="img-ph-label">Foto: Fundadora — retrato real</div></div>
+    <div class="about-img-badge">
+      <div class="big-num">+500</div>
+      <div class="badge-text">kits entregues<br>com amor</div>
+    </div>
+  </div>
+  <div class="about-content">
+    <div class="section-eyebrow">Nossa história</div>
+    <h2>Nascida do amor<br>de <em>mãe</em></h2>
+    <p>A Lilloh nasceu do desejo de transformar um dos momentos mais especiais da vida em uma memória ainda mais bonita. Como mãe, entendo que a chegada de um bebê merece ser celebrada com cuidado genuíno.</p>
+    <p>Cada kit é montado com atenção amorosa, com peças de qualidade que encantam tanto quem presenteia quanto quem recebe. Nosso propósito é fazer com que cada mamãe se sinta verdadeiramente celebrada.</p>
+    <p>Estamos em São Paulo e atendemos famílias e empresas em todo o Brasil — com a mesma dedicação desde o primeiro pedido.</p>
+    <a href="https://www.instagram.com/lilloh_babygifts" target="_blank" class="cta-outline">Seguir no Instagram →</a>
+  </div>
+</section>
+
+<!-- ═══════════ FAQ ═══════════ -->
+<section class="faq" id="faq">
+  <div class="faq-wrap">
+    <div class="faq-left">
+      <div class="section-eyebrow" style="text-align:left">Dúvidas</div>
+      <h2>Perguntas<br><em>frequentes</em></h2>
+      <p>Não encontrou sua resposta? Fale conosco pelo WhatsApp — respondemos em breve.</p>
+      <a href="https://wa.me/5511942748600" class="cta-main" style="margin-top:8px;display:inline-flex;">Falar pelo WhatsApp →</a>
+    </div>
+    <ul class="faq-list">
+
+      <li class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          Qual é o prazo médio de entrega?
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-a">[A preencher]</div>
+      </li>
+
+      <li class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          É possível trocar o kit?
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-a">[A preencher]</div>
+      </li>
+
+      <li class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          Existe um pedido mínimo para empresas?
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-a">[A preencher]</div>
+      </li>
+
+      <li class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          É possível receber em todo o Brasil?
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-a">[A preencher]</div>
+      </li>
+
+      <li class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          Como funciona a entrega para múltiplos endereços corporativos?
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-a">[A preencher]</div>
+      </li>
+
+      <!-- Espaço reservado para perguntas 6 e 7 — a definir após diagnóstico -->
+      <!-- <li class="faq-item">
+        <div class="faq-q" onclick="toggleFaq(this)">
+          [Pergunta a definir]
+          <span class="faq-icon">+</span>
+        </div>
+        <div class="faq-a">[A preencher]</div>
+      </li> -->
+
+    </ul>  </div>
+</section>
+
+<!-- ═══════════ CTA FINAL ═══════════ -->
+<section class="cta-band">
+  <div class="section-eyebrow">Vamos criar juntos</div>
+  <h2>Pronta para encantar<br>com um presente <em>único?</em></h2>
+  <p>Entre em contato e receba uma proposta personalizada em minutos.</p>
+  <div class="cta-band-btns">
+    <a href="https://wa.me/5511942748600" class="cta-main">Quero presentear →</a>
+    <a href="https://wa.me/5511942748600" class="cta-outline">Soluções para empresas →</a>
+  </div>
+</section>
+
+<!-- ═══════════ FOOTER ═══════════ -->
+<footer>
+  <div class="footer-top">
+    <div class="footer-brand">
+      <div class="logo"><em>Lilloh</em> Baby Gifts</div>
+      <p>Kits de maternidade com afeto, personalização e cuidado — para famílias e empresas que celebram com amor.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Navegação</h4>
+      <ul>
+        <li><a href="#catalogo">Catálogo de Kits</a></li>
+        <li><a href="#empresas">Para Empresas</a></li>
+        <li><a href="#sobre">Sobre a Lilloh</a></li>
+        <li><a href="#faq">Perguntas Frequentes</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Contato</h4>
+      <ul>
+        <li><a href="https://wa.me/5511942748600">WhatsApp</a></li>
+        <li><a href="https://www.instagram.com/lilloh_babygifts" target="_blank">@lilloh_babygifts</a></li>
+        <li><a href="/cdn-cgi/l/email-protection#187b77766c796c77587471747477707a797a617f717e6c6b367b7775367a6a"><span class="__cf_email__" data-cfemail="b0d3dfdec4d1c4dff0dcd9dcdcdfd8d2d1d2c9d7d9d6c4c39ed3dfdd9ed2c2">[email&#160;protected]</span></a></li>
+        <li><a>São Paulo, SP</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 Lilloh Baby Gifts. Todos os direitos reservados.</span>
+    <span>Feito com carinho em São Paulo</span>
+  </div>
+</footer>
+
+<!-- WA FLUTUANTE -->
+<a href="https://wa.me/5511942748600" class="wa-btn" title="Falar pelo WhatsApp">
+  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M20.52 3.48A11.93 11.93 0 0 0 12 0C5.37 0 0 5.37 0 12c0 2.11.55 4.17 1.6 5.98L0 24l6.18-1.62A11.94 11.94 0 0 0 12 24c6.63 0 12-5.37 12-12 0-3.2-1.25-6.22-3.48-8.52zM12 22c-1.85 0-3.67-.5-5.25-1.44l-.38-.22-3.92 1.03 1.04-3.82-.25-.4A9.94 9.94 0 0 1 2 12C2 6.48 6.48 2 12 2c2.67 0 5.18 1.04 7.07 2.93A9.93 9.93 0 0 1 22 12c0 5.52-4.48 10-10 10zm5.47-7.4c-.3-.15-1.77-.87-2.04-.97-.28-.1-.48-.15-.68.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.48-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.08-.15-.68-1.63-.93-2.23-.24-.58-.49-.5-.68-.51h-.58c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.21 3.08c.15.2 2.1 3.2 5.08 4.49.71.31 1.27.49 1.7.63.72.23 1.37.2 1.89.12.58-.09 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.07-.12-.27-.2-.57-.34z" fill="white"/>
+  </svg>
+</a>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+// Scroll nav
+window.addEventListener('scroll', () => {
+  document.getElementById('navbar').classList.toggle('sc
